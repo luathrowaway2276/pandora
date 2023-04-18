@@ -1,0 +1,1071 @@
+{
+	// https://api.pandora.gg/api/documentation/tables/client/
+	"log": {
+		"prefix": "client.log",
+		"body": [
+			"client.log(${1:message}, ${2:color}, ${3:prefix}, ${4:visible})"
+		],
+	},
+	"load_script": {
+		"prefix": "client.load_script",
+		"body": [
+			"client.load_script(${1:file_name})"
+		],
+	},
+	"choked_commands": {
+		"prefix": "client.choked_commands",
+		"body": [
+			"client.choked_commands()"
+		],
+	},
+	"client.is_alive": {
+		"prefix": "client.is_alive",
+		"body": [
+			"client.is_alive()"
+		],
+	},
+	"latency": {
+		"prefix": "client.latency",
+		"body": [
+			"client.latency()"
+		],
+	},
+	"local_time": {
+		"prefix": "client.local_time",
+		"body": [
+			"client.local_time(${1:format})"
+		],
+	},
+	"unix_timestamp": {
+		"prefix": "client.unix_timestamp",
+		"body": [
+			"client.unix_timestamp()"
+		],
+	},
+	"map_name": {
+		"prefix": "client.map_name",
+		"body": [
+			"client.map_name()"
+		],
+	},
+	"camera_position": {
+		"prefix": "client.camera_position",
+		"body": [
+			"client.camera_position()"
+		],
+	},
+	"camera_angles": {
+		"prefix": "client.camera_angles",
+		"body": [
+			"client.camera_angles()"
+		],
+	},
+	"find_sig": {
+		"prefix": "client.find_sig",
+		"body": [
+			"client.find_sig(${1:module}, ${2:sig})"
+		],
+	},
+	"create_interface": {
+		"prefix": "client.create_interface",
+		"body": [
+			"client.create_interface(${1:module}, ${2:interface})"
+		],
+	},
+	"username": {
+		"prefix": "client.username",
+		"body": [
+			"client.username"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/tables/callbacks/
+	"register": {
+		"prefix": "callbacks.register",
+		"body": [
+			"callbacks.register(\"${1:name}\", ${2:callback})"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/tables/entity_list/
+	"get_client_entity": {
+		"prefix": "entity_list.get_client_entity",
+		"body": [
+			"entity_list.get_client_entity(${1:entnum})"
+		],
+	},
+	"get_all": {
+		"prefix": "entity_list.get_all",
+		"body": [
+			"entity_list.get_all(${1:networkname})"
+		],
+	},
+	"get_highest_entity_index": {
+		"prefix": "entity_list.get_highest_entity_index",
+		"body": [
+			"entity_list.get_highest_entity_index()"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/tables/engine/
+	"get_player_for_user_id": {
+		"prefix": "engine.get_player_for_user_id",
+		"body": [
+			"engine.get_player_for_user_id(${1:userid})"
+		],
+	},
+	"in_game": {
+		"prefix": "engine.in_game",
+		"body": [
+			"engine.in_game()"
+		],
+	},
+	"is_connected": {
+		"prefix": "engine.is_connected",
+		"body": [
+			"engine.is_connected()"
+		],
+	},
+	"execute_client_cmd": {
+		"prefix": "engine.execute_client_cmd",
+		"body": [
+			"engine.execute_client_cmd(${1:cmd})"
+		],
+	},
+	"set_view_angles": {
+		"prefix": "engine.set_view_angles",
+		"body": [
+			"engine.set_view_angles(${1:viewangle})"
+		],
+	},
+	"get_view_angles": {
+		"prefix": "engine.get_view_angles",
+		"body": [
+			"engine.get_view_angles()"
+		],
+	},
+	"get_local_player": {
+		"prefix": "engine.get_local_player",
+		"body": [
+			"engine.get_local_player()"
+		],
+	},
+	"get_player_info": {
+		"prefix": "engine.get_player_info",
+		"body": [
+			"engine.get_player_info(${1:entnum})"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/tables/esp/
+	"set_thirdperson_animation": {
+		"prefix": "esp.set_thirdperson_animation",
+		"body": [
+			"esp.set_thirdperson_animation(${1:true})"
+		],
+	},
+	"set_fading_chams": {
+		"prefix": "esp.set_fading_chams",
+		"body": [
+			"esp.set_fading_chams(${1:true})"
+		],
+	},
+	"add_player_flag": {
+		"prefix": "esp.add_player_flag",
+		"body": [
+			"esp.add_player_flag(\"${1:text}\", ${2:color}, ${3:entindex})"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/tables/cvar/
+	"curtime": {
+		"prefix": "global_vars.curtime",
+		"body": [
+			"global_vars.curtime()"
+		],
+	},
+	"frametime": {
+		"prefix": "global_vars.frametime",
+		"body": [
+			"global_vars.frametime()"
+		],
+	},
+	"absoluteframetime": {
+		"prefix": "global_vars.absoluteframetime",
+		"body": [
+			"global_vars.absoluteframetime()"
+		],
+	},
+	"framecount": {
+		"prefix": "global_vars.framecount",
+		"body": [
+			"global_vars.framecount()"
+		],
+	},
+	"tickcount": {
+		"prefix": "global_vars.tickcount",
+		"body": [
+			"global_vars.tickcount()"
+		],
+	},
+	"realtime": {
+		"prefix": "global_vars.realtime",
+		"body": [
+			"global_vars.realtime()"
+		],
+	},
+	"max_clients": {
+		"prefix": "global_vars.max_clients",
+		"body": [
+			"global_vars.max_clients()"
+		],
+	},
+	"interval_per_tick": {
+		"prefix": "global_vars.interval_per_tick",
+		"body": [
+			"global_vars.interval_per_tick()"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/tables/cvar/
+	"find_var": {
+		"prefix": "cvar.find_var",
+		"body": [
+			"cvar.find_var()"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/tables/engine_trace/
+	"trace_ray": {
+		"prefix": "engine_trace.trace_ray",
+		"body": [
+			"engine_trace.trace_ray(${1:start}, ${2:end}, ${3:skip}, ${4:mask})"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/tables/render/
+	"rectangle": {
+		"prefix": "render.rectangle",
+		"body": [
+			"render.rectangle(${1:x}, ${2:y}, ${3:w}, ${4:h}, ${5:color})"
+		],
+	},
+	"rectangle_filled": {
+		"prefix": "render.rectangle_filled",
+		"body": [
+			"render.rectangle_filled(${1:x}, ${2:y}, ${3:w}, ${4:h}, ${5:color})"
+		],
+	},
+	"gradient": {
+		"prefix": "render.gradient",
+		"body": [
+			"render.gradient(${1:x}, ${2:y}, ${3:w}, ${4:h}, ${5:color}, ${5:color2}, ${5:horizontal})"
+		],
+	},
+	"triangle_filled": {
+		"prefix": "render.triangle_filled",
+		"body": [
+			"render.triangle_filled(${1:pos1}, ${2:pos2}, ${3:pos3}, ${4:color})"
+		],
+	},
+	"circle_world": {
+		"prefix": "render.circle_world",
+		"body": [
+			"render.circle_world(${1:origin}, ${2:radius}, ${3:color}, ${4:colorFill})"
+		],
+	},
+	"circle_filled": {
+		"prefix": "render.circle_filled",
+		"body": [
+			"render.circle_filled(${1:x}, ${2:y}, ${3:radius}, ${4:segments}, ${5:color})"
+		],
+	},
+	"line": {
+		"prefix": "render.line",
+		"body": [
+			"render.line(${1:x}, ${2:y}, ${3:x2}, ${4:y2}, ${5:color})"
+		],
+	},
+	"text": {
+		"prefix": "render.text",
+		"body": [
+			"render.text(${1:x}, ${2:y}, ${3:text}, ${4:color})"
+		],
+	},
+	"get_text_size": {
+		"prefix": "render.get_text_size",
+		"body": [
+			"render.get_text_size(${1:text})"
+		],
+	},
+	"create_font": {
+		"prefix": "render.create_font",
+		"body": [
+			"render.create_font(${1:fontname}, ${2:size}, ${3:weight}, ${4:flags})"
+		],
+	},
+	"get_screen": {
+		"prefix": "render.get_screen",
+		"body": [
+			"render.get_screen()"
+		],
+	},
+	"world_to_screen": {
+		"prefix": "render.world_to_screen",
+		"body": [
+			"render.world_to_screen(${1:input}, ${2:output})"
+		],
+	},
+	
+	// https://api.pandora.gg/api/documentation/tables/render/fontflag/
+	"font_flags_none": {
+		"prefix": "font_flags.none",
+		"body": [
+			"font_flags.none"
+		],
+	},
+	"font_flags_antialias": {
+		"prefix": "font_flags.antialias",
+		"body": [
+			"font_flags.antialias"
+		],
+	},
+	"font_flags_dropshadow": {
+		"prefix": "font_flags.dropshadow",
+		"body": [
+			"font_flags.dropshadow"
+		],
+	},
+	"font_flags_outline": {
+		"prefix": "font_flags.outline",
+		"body": [
+			"font_flags.outline"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/tables/ui/
+	"is_open": {
+		"prefix": "ui.is_open",
+		"body": [
+			"ui.is_open()"
+		],
+	},
+	"get": {
+		"prefix": "ui.get",
+		"body": [
+			"ui.get(\"${1:tab}\", \"${2:sub_tab}\", \"${3:group}\", \"${4:option}\", (optional)\"${5:weapon_group}\")" // okay, since weapon_group is optional i guess it'll be fine to have it auto complete as (optional)weapon_group? if anyone has a better idea i'd love to hear it
+		],
+	},
+	"get_rage": {
+		"prefix": "ui.get_rage",
+		"body": [
+			"ui.get_rage(\"${1:group}\", \"${2:option}\")"
+		],
+	},
+	"add_checkbox": {
+		"prefix": "ui.add_checkbox",
+		"body": [
+			"ui.add_checkbox(\"${1:name}\")"
+		],
+	},
+	"add_dropdown": {
+		"prefix": "ui.add_dropdown",
+		"body": [
+			"ui.add_dropdown(\"${1:name}\", {\"Option 1\", \"Option 2\"})"
+		],
+	},
+	"add_multi_dropdown": {
+		"prefix": "ui.add_multi_dropdown",
+		"body": [
+			"ui.add_multi_dropdown(\"${1:name}\", {\"Option 1\", \"Option 2\"})"
+		],
+	},
+	"add_button": { // this one is setup a bit unique because it requires add_callback to really do anything
+		"prefix": "ui.add_button",
+		"body": [
+			"button = ui.add_button(\"${1:name}\")",
+			"button:add_callback(function() print(\"test!\") end)"
+		],
+	},
+	"add_textbox": {
+		"prefix": "ui.add_textbox",
+		"body": [
+			"ui.add_textbox(\"${1:name}\")"
+		],
+	},
+	"add_label": {
+		"prefix": "ui.add_label",
+		"body": [
+			"ui.add_label(\"${1:name}\")"
+		],
+	},
+	"add_hotkey": {
+		"prefix": "ui.add_hotkey",
+		"body": [
+			"ui.add_hotkey(\"${1:name}\")"
+		],
+	},
+	"add_colorpicker": {
+		"prefix": "ui.add_colorpicker",
+		"body": [
+			"ui.add_colorpicker(\"${1:name}\")"
+		],
+	},
+	"add_slider": {
+		"prefix": "ui.add_slider",
+		"body": [
+			"ui.add_slider(\"${1:name}\", ${2:min}, ${3:max})"
+		],
+	},
+	"add_slider_float": {
+		"prefix": "ui.add_slider_float",
+		"body": [
+			"ui.add_slider(\"${1:name}\", ${2:min}, ${3:max})"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/tables/anti_aim/
+	"inverted": {
+		"prefix": "anti_aim.inverted",
+		"body": [
+			"anti_aim.inverted()"
+		],
+	},
+	"should_run": {
+		"prefix": "anti_aim.should_run",
+		"body": [
+			"anti_aim.should_run(${1:usercmd}, ${2:skip_firing_check})"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/tables/exploits/
+	"process_ticks": {
+		"prefix": "exploits.process_ticks",
+		"body": [
+			"exploits.process_ticks()"
+		],
+	},
+	"max_process_ticks": {
+		"prefix": "exploits.max_process_ticks",
+		"body": [
+			"exploits.max_process_ticks()"
+		],
+	},
+	"charging": {
+		"prefix": "exploits.charging",
+		"body": [
+			"exploits.charging()"
+		],
+	},
+	"ready": {
+		"prefix": "exploits.ready",
+		"body": [
+			"exploits.ready()"
+		],
+	},
+	"force_recharge": {
+		"prefix": "exploits.force_recharge",
+		"body": [
+			"exploits.force_recharge()"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/tables/penetration/
+	"damage": {
+		"prefix": "penetration.damage",
+		"body": [
+			"penetration.damage()"
+		],
+	},
+	"simulate_bullet": {
+		"prefix": "penetration.simulate_bullet",
+		"body": [
+			"penetration.simulate_bullet(${1:attacker}, ${2:start}, ${3:end})"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/tables/materials/
+	"create_material": {
+		"prefix": "materials.create_material",
+		"body": [
+			"materials.create_material(${1:name}, ${2:vmt}, ${3:type})"
+		],
+	},
+	"find_material": {
+		"prefix": "materials.find_material",
+		"body": [
+			"materials.find_material(${1:name}, ${2:group})"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/tables/command/
+	"in_attack": {
+		"prefix": "command.in_attack",
+		"body": [
+			"command.in_attack"
+		],
+	},
+	"in_jump": {
+		"prefix": "command.in_jump",
+		"body": [
+			"command.in_jump"
+		],
+	},
+	"in_duck": {
+		"prefix": "command.in_duck",
+		"body": [
+			"command.in_duck"
+		],
+	},
+	"in_forward": {
+		"prefix": "command.in_forward",
+		"body": [
+			"command.in_forward"
+		],
+	},
+	"in_back": {
+		"prefix": "command.in_back",
+		"body": [
+			"command.in_back"
+		],
+	},
+	"in_cancel": {
+		"prefix": "command.in_cancel",
+		"body": [
+			"command.in_cancel"
+		],
+	},
+	"in_left": {
+		"prefix": "command.in_left",
+		"body": [
+			"command.in_left"
+		],
+	},
+	"in_right": {
+		"prefix": "command.in_right",
+		"body": [
+			"command.in_right"
+		],
+	},
+	"in_moveleft": {
+		"prefix": "command.in_moveleft",
+		"body": [
+			"command.in_moveleft"
+		],
+	},
+	"in_moveright": {
+		"prefix": "command.in_moveright",
+		"body": [
+			"command.in_moveright"
+		],
+	},
+	"in_attack2": {
+		"prefix": "command.in_attack2",
+		"body": [
+			"command.in_attack2"
+		],
+	},
+	"in_reload": {
+		"prefix": "command.in_reload",
+		"body": [
+			"command.in_reload"
+		],
+	},
+	"in_speed": {
+		"prefix": "command.in_speed",
+		"body": [
+			"command.in_speed"
+		],
+	},
+	"in_bullrush": {
+		"prefix": "command.in_bullrush",
+		"body": [
+			"command.in_bullrush"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/tables/input/
+	"key_down": {
+		"prefix": "input.key_down",
+		"body": [
+			"input.key_down(${1:key})"
+		],
+	},
+	"key_pressed": {
+		"prefix": "input.key_pressed",
+		"body": [
+			"input.key_pressed(${1:key})"
+		],
+	},
+	"mouse_position": {
+		"prefix": "input.mouse_position",
+		"body": [
+			"input.mouse_position()"
+		],
+	},
+	"force_cursor": {
+		"prefix": "input.force_cursor",
+		"body": [
+			"input.force_cursor(${1:state})"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/datatypes/game-related/usercmd/
+	"command_number": {
+		"prefix": ".command_number",
+		"body": [
+			".command_number"
+		],
+	},
+	"tick_count": {
+		"prefix": ".tick_count",
+		"body": [
+			".tick_count"
+		],
+	},
+	"viewangles": {
+		"prefix": ".viewangles",
+		"body": [
+			".viewangles"
+		],
+	},
+	"aimdirection": {
+		"prefix": ".aimdirection",
+		"body": [
+			".aimdirection"
+		],
+	},
+	"forwardmove": {
+		"prefix": ".forwardmove",
+		"body": [
+			".forwardmove"
+		],
+	},
+	"sidemove": {
+		"prefix": ".sidemove",
+		"body": [
+			".sidemove"
+		],
+	},
+	"upmove": {
+		"prefix": ".upmove",
+		"body": [
+			".upmove"
+		],
+	},
+	"buttons": {
+		"prefix": ".buttons",
+		"body": [
+			".buttons"
+		],
+	},
+	"impulse": {
+		"prefix": ".impulse",
+		"body": [
+			".impulse"
+		],
+	},
+	"weaponselect": {
+		"prefix": ".weaponselect",
+		"body": [
+			".weaponselect"
+		],
+	},
+	"random_seed": {
+		"prefix": ".random_seed",
+		"body": [
+			".random_seed"
+		],
+	},
+	"mousedx": {
+		"prefix": ".mousedx",
+		"body": [
+			".mousedx"
+		],
+	},
+	"mousedy": {
+		"prefix": ".mousedy",
+		"body": [
+			".mousedy"
+		],
+	},
+	"hasbeenpredicted": {
+		"prefix": ".hasbeenpredicted",
+		"body": [
+			".hasbeenpredicted"
+		],
+	},
+	"has_flag": {
+		"prefix": ":has_flag",
+		"body": [
+			":has_flag(${1:flag})"
+		],
+	},
+	"set_flag": {
+		"prefix": ":set_flag",
+		"body": [
+			":set_flag(${1:flag})"
+		],
+	},
+	"remove_flag": {
+		"prefix": ":remove_flag",
+		"body": [
+			":remove_flag(${1:flag})"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/datatypes/game-related/convar/
+	"get_int": {
+		"prefix": ":get_int",
+		"body": [
+			":get_int()"
+		],
+	},
+	"get_bool": {
+		"prefix": ":get_bool",
+		"body": [
+			":get_bool()"
+		],
+	},
+	"get_float": {
+		"prefix": ":get_float",
+		"body": [
+			":get_float()"
+		],
+	},
+	"get_string": {
+		"prefix": ":get_string",
+		"body": [
+			":get_string()"
+		],
+	},
+	"set_value_int": {
+		"prefix": ":set_value_int",
+		"body": [
+			":set_value_int(${1:input})"
+		],
+	},
+	"set_value_float": {
+		"prefix": ":set_value_float",
+		"body": [
+			":set_value_float(${1:input})"
+		],
+	},
+	"set_value_string": {
+		"prefix": ":set_value_string",
+		"body": [
+			":set_value_string(${1:input})"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/datatypes/game-related/player_info/
+	"name": {
+		"prefix": ".name",
+		"body": [
+			".name"
+		],
+	},
+	"fakeplayer": {
+		"prefix": ".fakeplayer",
+		"body": [
+			".fakeplayer"
+		],
+	},
+	"steamID64": {
+		"prefix": ".steamID64",
+		"body": [
+			".steamID64"
+		],
+	},
+	"szSteamID": {
+		"prefix": ".szSteamID",
+		"body": [
+			".szSteamID"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/datatypes/game-related/game_event/
+	// conflicts? todo: figure out what to do in this situation
+
+	// https://api.pandora.gg/api/documentation/datatypes/game-related/game_trace/
+	"allsolid": {
+		"prefix": ".allsolid",
+		"body": [
+			".allsolid"
+		],
+	},
+	"endpos": {
+		"prefix": ".endpos",
+		"body": [
+			".endpos"
+		],
+	},
+	"fraction": {
+		"prefix": ".fraction",
+		"body": [
+			".fraction"
+		],
+	},
+	"hitbox": {
+		"prefix": ".hitbox",
+		"body": [
+			".hitbox"
+		],
+	},
+	"hitgroup": {
+		"prefix": ".hitgroup",
+		"body": [
+			".hitgroup"
+		],
+	},
+	"startsolid": {
+		"prefix": ".startsolid",
+		"body": [
+			".startsolid"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/datatypes/game-related/entity/
+	"index": {
+		"prefix": ":index",
+		"body": [
+			":index()"
+		],
+	},
+	"dormant": {
+		"prefix": ":dormant",
+		"body": [
+			":dormant()"
+		],
+	},
+	"class_id": {
+		"prefix": ":class_id",
+		"body": [
+			":class_id()"
+		],
+	},
+	"origin": {
+		"prefix": ":origin",
+		"body": [
+			":origin()"
+		],
+	},
+	"eye_position": {
+		"prefix": ":eye_position",
+		"body": [
+			":eye_position()"
+		],
+	},
+	"hitbox_position": {
+		"prefix": ":hitbox_position",
+		"body": [
+			":hitbox_position(${1:hitbox})"
+		],
+	},
+	"get_prop": {
+		"prefix": ":get_prop",
+		"body": [
+			":get_prop(\"${1:table}\", \"${2:prop}\")"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/datatypes/game-related/entity/netvar/
+	// has conflicts aswell
+
+	// https://api.pandora.gg/api/documentation/datatypes/game-related/model_draw_context/
+	"get_entity": {
+		"prefix": ":get_entity",
+		"body": [
+			":get_entity()"
+		],
+	},
+	"get_model": {
+		"prefix": ":get_model",
+		"body": [
+			":get_model()"
+		],
+	},
+	"draw_model": {
+		"prefix": ":draw_model",
+		"body": [
+			":draw_model()"
+		],
+	},
+	"force_material_override": {
+		"prefix": ":force_material_override",
+		"body": [
+			":force_material_override(${1:mat})"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/datatypes/game-related/material/
+	"is_valid": {
+		"prefix": ":is_valid",
+		"body": [
+			":is_valid()"
+		],
+	},
+	"modulate_alpha": {
+		"prefix": ":modulate_alpha",
+		"body": [
+			":modulate_alpha(${1:alpha})"
+		],
+	},
+	"modulate_color": {
+		"prefix": ":modulate_color",
+		"body": [
+			":modulate_color(${1:red}, ${2:green}, ${3:blule})"
+		],
+	},
+	"set_material_var_flag": {
+		"prefix": ":set_material_var_flag",
+		"body": [
+			":set_material_var_flag(${1:flag}, ${2:on})"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/datatypes/game-related/material_var/
+	"set_int_value": {
+		"prefix": ":set_int_value",
+		"body": [
+			":set_int_value(${1:value})"
+		],
+	},
+	"set_float_value": {
+		"prefix": ":set_float_value",
+		"body": [
+			":set_float_value(${1:value})"
+		],
+	},
+	"set_string_value": {
+		"prefix": ":set_string_value",
+		"body": [
+			":set_string_value(\"${1:value}\")"
+		],
+	},
+	"set_vec_value": {
+		"prefix": ":set_vec_value",
+		"body": [
+			":set_float_value(${1:value}, ${2:value2}, ${3:value3})"
+		],
+	},
+
+	// math ones are too generic i fear, skip
+
+	// https://api.pandora.gg/api/documentation/datatypes/ui/
+	// (and other generic ui funcs)
+	"set_visible": {
+		"prefix": ":set_visible",
+		"body": [
+			":set_visible(${1:input})"
+		],
+	},
+	"add_callback": {
+		"prefix": ":add_callback",
+		"body": [
+			":add_callback(${1:func})"
+		],
+	},
+	"set": {
+		"prefix": ":set",
+		"body": [
+			":set(${1:value})"
+		],
+	},
+	"update_items": {
+		"prefix": ":update_items",
+		"body": [
+			":update_items({\"Option 1\", \"Option 2\"})"
+		],
+	},
+	"set_key_cond": {
+		"prefix": ":set_key_cond",
+		"body": [
+			":set_key_cond(${1:input})"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/datatypes/other/color/
+	"r": {
+		"prefix": ":r",
+		"body": [
+			":r()"
+		],
+	},
+	"g": {
+		"prefix": ":g",
+		"body": [
+			":g()"
+		],
+	},
+	"b": {
+		"prefix": ":b",
+		"body": [
+			":b()"
+		],
+	},
+	"a": {
+		"prefix": ":a",
+		"body": [
+			":a()"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/datatypes/other/font/
+	"get_size": {
+		"prefix": ":get_size",
+		"body": [
+			":text(\"${1:string}\")"
+		],
+	},
+
+	// https://api.pandora.gg/api/documentation/tables/callbacks/callback-list/
+	"paint": {
+		"prefix": "paint",
+		"body": [
+			"\"paint\""
+		],
+	},
+	"pre_frame_stage": {
+		"prefix": "pre_frame_stage",
+		"body": [
+			"\"pre_frame_stage\""
+		],
+	},
+	"post_frame_stage": {
+		"prefix": "post_frame_stage",
+		"body": [
+			"\"post_frame_stage\""
+		],
+	},
+	"post_move": {
+		"prefix": "post_move",
+		"body": [
+			"\"post_move\""
+		],
+	},
+	"predicted_move": {
+		"prefix": "\"predicted_move\"",
+		"body": [
+			"\"predicted_move\""
+		],
+	},
+	"post_anim_update": {
+		"prefix": "post_anim_update",
+		"body": [
+			"\"post_anim_update\""
+		],
+	},
+	"on_hitmarker": {
+		"prefix": "\"on_hitmarker\"",
+		"body": [
+			"\"on_hitmarker\""
+		],
+	},
+	"draw_model2": {
+		"prefix": "draw_model",
+		"body": [
+			"\"draw_model\""
+		],
+	},
+}
