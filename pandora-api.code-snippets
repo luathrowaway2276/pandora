@@ -181,49 +181,49 @@
 	"curtime": {
 		"prefix": "global_vars.curtime",
 		"body": [
-			"global_vars.curtime()"
+			"global_vars.curtime"
 		],
 	},
 	"frametime": {
 		"prefix": "global_vars.frametime",
 		"body": [
-			"global_vars.frametime()"
+			"global_vars.frametime"
 		],
 	},
 	"absoluteframetime": {
 		"prefix": "global_vars.absoluteframetime",
 		"body": [
-			"global_vars.absoluteframetime()"
+			"global_vars.absoluteframetime"
 		],
 	},
 	"framecount": {
 		"prefix": "global_vars.framecount",
 		"body": [
-			"global_vars.framecount()"
+			"global_vars.framecount"
 		],
 	},
 	"tickcount": {
 		"prefix": "global_vars.tickcount",
 		"body": [
-			"global_vars.tickcount()"
+			"global_vars.tickcount"
 		],
 	},
 	"realtime": {
 		"prefix": "global_vars.realtime",
 		"body": [
-			"global_vars.realtime()"
+			"global_vars.realtime"
 		],
 	},
 	"max_clients": {
 		"prefix": "global_vars.max_clients",
 		"body": [
-			"global_vars.max_clients()"
+			"global_vars.max_clients"
 		],
 	},
 	"interval_per_tick": {
 		"prefix": "global_vars.interval_per_tick",
 		"body": [
-			"global_vars.interval_per_tick()"
+			"global_vars.interval_per_tick"
 		],
 	},
 
