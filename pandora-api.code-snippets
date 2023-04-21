@@ -316,7 +316,19 @@
 			"render.world_to_screen(${1:input}, ${2:output})"
 		],
 	},
-	
+	"rectangle_rounded": {
+		"prefix": "render.rectangle_rounded",
+		"body": [
+			"render.rectangle_rounded(${1:x}, ${2:y}, ${3:w}, ${4:h}, ${5:color}, ${6:radius})"
+		],
+	},
+	"rectangle_rounded_filled": {
+		"prefix": "render.rectangle_rounded_filled",
+		"body": [
+			"render.rectangle_rounded_filled(${1:x}, ${2:y}, ${3:w}, ${4:h}, ${5:color}, ${6:radius})"
+		],
+	},
+
 	// https://api.pandora.gg/api/documentation/tables/render/fontflag/
 	"font_flags_none": {
 		"prefix": "font_flags.none",
