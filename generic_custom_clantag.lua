@@ -56,8 +56,8 @@ local function handle_clantag()
         local text = config.text:get()
 
         if animation_style == 0 then -- scroll
-            local index = math.floor((global_vars.curtime / animation_speed) % #text) + 1
-            wanted_clantag = text:sub(index) .. text:sub(1, index - 1)
+            local index = math.floor((global_vars.curtime / animation_speed) % #text)
+            wanted_clantag = text:sub(index) .. text:sub(1, index)
         elseif animation_style == 1 then -- spell
             wanted_clantag = text:sub(0, math.floor((global_vars.curtime / animation_speed) % #text))
         end
