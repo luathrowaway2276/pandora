@@ -10,10 +10,10 @@ local helpers = {
 }
 
 local config = {
-    type = ui.add_dropdown("Clantag", {"Disabled", "Static", "Animated"}),
-    text = ui.add_textbox("Clantag text"),
-    animation_style = ui.add_dropdown("Clantag animation style", {"Scroll", "Spell"}),
-    speed = ui.add_slider("Clantag animation speed", 1, 100),
+    type = ui.add_dropdown("Type", {"Disabled", "Static", "Animated"}),
+    text = ui.add_textbox("Text"),
+    animation_style = ui.add_dropdown("Animation style", {"Scroll", "Spell"}),
+    speed = ui.add_slider("Animation speed", 1, 100),
 }
 
 local stored_clantag_type = -1
