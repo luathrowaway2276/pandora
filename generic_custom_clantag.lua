@@ -18,6 +18,10 @@ local config = {
 
 local stored_clantag_type = -1
 local function handle_ui()
+    if not ui.is_open() then
+        return
+    end
+    
     clantag_type = config.type:get()
 
     if stored_clantag_type ~= clantag_type then
@@ -31,6 +35,10 @@ end
 local wanted_clantag = ""
 local last_clantag = ""
 local function handle_clantag()
+    if not engine.in_game() then
+        return
+    end
+
     local clantag_type = config.type:get()
 
     -- should we clear our clantag?
