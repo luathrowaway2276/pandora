@@ -52,7 +52,7 @@ local function on_paint()
         stored_map_name = map_name
     end
 
-    local_player = entity_list.get_client_entity(engine.get_local_player())
+    local local_player = entity_list.get_client_entity(engine.get_local_player())
 
     if not local_player then
         return
