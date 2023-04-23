@@ -1,15 +1,18 @@
 local ffi = require("ffi")
 
-local addresses = {
+local addresses = 
+{
     -- x-ref "ClanTagChanged"
     send_clan_tag = client.find_sig("engine.dll", "53 56 57 8B DA 8B F9 FF")
 }
 
-local helpers = {
+local helpers = 
+{
     set_clan_tag = ffi.cast("void(__fastcall*)(const char*, const char*)", addresses.send_clan_tag)
 }
 
-local config = {
+local config = 
+{
     type = ui.add_dropdown("Type", {"Disabled", "Static", "Animated"}),
     text = ui.add_textbox("Text"),
     animation_style = ui.add_dropdown("Animation style", {"Scroll", "Spell"}),
@@ -18,10 +21,6 @@ local config = {
 
 local stored_clantag_type = -1
 local function handle_ui()
-    if not ui.is_open() then
-        return
-    end
-    
     clantag_type = config.type:get()
 
     if stored_clantag_type ~= clantag_type then
@@ -35,10 +34,6 @@ end
 local wanted_clantag = ""
 local last_clantag = ""
 local function handle_clantag()
-    if not engine.in_game() then
-        return
-    end
-
     local clantag_type = config.type:get()
 
     -- should we clear our clantag?
@@ -56,8 +51,8 @@ local function handle_clantag()
         local text = config.text:get()
 
         if animation_style == 0 then -- scroll
-            local index = math.floor((global_vars.curtime / animation_speed) % #text)
-            wanted_clantag = text:sub(index) .. text:sub(1, index)
+            local index = math.floor((global_vars.curtime / animation_speed) % #text) + 1
+            wanted_clantag = text:sub(index) .. text:sub(1, index - 1)
         elseif animation_style == 1 then -- spell
             wanted_clantag = text:sub(0, math.floor((global_vars.curtime / animation_speed) % #text))
         end
