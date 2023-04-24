@@ -12,7 +12,6 @@ local waypoint_names = {}
 local way_point_types =
 {
     "Oneway",
-    "High damage",
     "Other"
 }
 
@@ -21,7 +20,7 @@ local config =
     selected_waypoint = ui.add_dropdown("Selected waypoint", {}),
     point_name = ui.add_textbox("Point name"),
     point_max_distance = ui.add_slider("Point max distance", 0, 100),
-    point_type = ui.add_dropdown("Point type", way_point_types),
+    visualize_range = ui.add_checkbox("Visualize range"),
     create_point = ui.add_button("Create point"),
     delete_point = ui.add_button("Delete point"),
     refresh_points = ui.add_button("Refresh points"),
@@ -37,6 +36,10 @@ local function refresh_points()
     end
 
     config.selected_waypoint:update_items(waypoint_names)
+
+    if #waypoint_names > 0 then
+        client.log(#waypoint_names .. " waypoints discovered!")
+    end
 end
 
 local stored_map_name = ""
@@ -69,31 +72,41 @@ local function on_paint()
 
         -- calculate distance using the euclidean distance formula
         local distance = math.sqrt((v.x - origin.x)^2 + (v.y - origin.y)^2)
+
+        if distance > 1000 then
+            goto skip
+        end
+
         local alpha = math.max(0, 255 - (255 / 1000) * distance)
         local in_range = distance < v.max_distance
 
         -- if we are in range, let the player know
-        if in_range then
-           render.circle_world(vector.new(v.x, v.y, v.z), v.max_distance, color.new(0, 0, 0, 0), color.new(140, 235, 52, alpha * 0.33))
-        else
-           render.circle_world(vector.new(v.x, v.y, v.z), v.max_distance, color.new(0, 0, 0, 0), color.new(235, 64, 52, alpha * 0.33))
+        if config.visualize_range:get() and v.max_distance > 0 then
+            if in_range then
+                render.circle_world(vector.new(v.x, v.y, v.z), v.max_distance, color.new(0, 0, 0, 0), color.new(140, 235, 52, alpha * 0.33))
+             else
+                render.circle_world(vector.new(v.x, v.y, v.z), v.max_distance, color.new(0, 0, 0, 0), color.new(235, 64, 52, alpha * 0.33))
+             end
         end
 
         if render.world_to_screen(vector.new(v.x, v.y, v.z + 15), screen_pos) then
             local text_width, text_height = fonts.indicator:get_size(v.name)
-            local box_size = vector2d.new(text_width + 4, text_height + 5)
+            local box_size = vector2d.new(text_width + 4, text_height + 6)
             local box_pos = vector2d.new(screen_pos.x - (box_size.x * 0.5), screen_pos.y)
 
             render.rectangle_filled(box_pos.x, box_pos.y, box_size.x, box_size.y, color.new(40, 40, 40, alpha))
 
             if in_range then
-                render.rectangle_filled(box_pos.x, box_pos.y + (box_size.y - 1), box_size.x, 1, color.new(140, 235, 52, alpha))
+                render.rectangle_filled(box_pos.x, box_pos.y + (box_size.y - 2), box_size.x, 1, color.new(140, 235, 52, alpha))
             else
-                render.rectangle_filled(box_pos.x, box_pos.y + (box_size.y - 1), box_size.x, 1, color.new(235, 64, 52, alpha))
+                render.rectangle_filled(box_pos.x, box_pos.y + (box_size.y - 2), box_size.x, 1, color.new(235, 64, 52, alpha))
             end
 
+            render.rectangle(box_pos.x, box_pos.y, box_size.x, box_size.y, color.new(40, 40, 40, alpha))
             fonts.indicator:text(box_pos.x + 2, box_pos.y + 1, color.new(255, 255, 255, alpha), v.name)
         end
+
+        ::skip::
     end
 end
 
@@ -116,8 +129,9 @@ config.create_point:add_callback(
             x = origin.x,
             y = origin.y,
             z = origin.z,
-            name = way_point_types[config.point_type:get() + 1] .. " | " .. config.point_name:get(),
-            max_distance = config.point_max_distance:get()
+            name = config.point_name:get(),
+            max_distance = config.point_max_distance:get(),
+            type = config.point_type:get()
         }
 
         for k, v in ipairs(way_points[client.map_name()]) do
@@ -152,6 +166,7 @@ config.save_points:add_callback(
         local file_handle = file_system.open("waypoints/points.json", "w+", "")
         file_handle:write(json.encode(way_points))
         file_handle:close()
+        client.log("Saved waypoints!")
     end
 )
 
@@ -160,6 +175,7 @@ config.load_points:add_callback(
         local file_handle = file_system.open("waypoints/points.json", "r+", "")
         way_points = json.decode(file_handle:read())
         file_handle:close()
+        client.log("Loaded waypoints!")
         refresh_points()
     end
 )
