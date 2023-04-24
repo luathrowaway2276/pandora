@@ -9,12 +9,6 @@ local fonts =
 local way_points = {}
 local waypoint_names = {}
 
-local way_point_types =
-{
-    "Oneway",
-    "Other"
-}
-
 local config = 
 {
     selected_waypoint = ui.add_dropdown("Selected waypoint", {}),
